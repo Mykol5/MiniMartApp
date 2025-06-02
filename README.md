@@ -20,7 +20,7 @@ The goal of this project was to:
 - **Navigation**: React Navigation
 - **State Management**: React Context API
 - **UI Libraries**: React Native Paper, React Native Vector Icons
-- **Package Manager**: npm
+- **Package Manager**: yarn
 
 ## Features Implemented
 
