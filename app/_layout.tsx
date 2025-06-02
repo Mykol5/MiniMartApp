@@ -1,0 +1,91 @@
+// import React from 'react'; 
+// import { Slot } from "expo-router";
+// import { View } from "react-native";
+// import TabBar from "../components/TabBar";
+// import TopNavBar from '@/components/TopNavBar';
+// import { CartProvider } from "../contexts/CartContext";
+// import { SafeAreaProvider } from 'react-native-safe-area-context';
+// import Toast from 'react-native-toast-message';
+// import { StatusBar } from 'expo-status-bar';
+
+// export default function RootLayout() {
+//   return (
+//     <SafeAreaProvider>
+
+//     <CartProvider>
+//       <View style={{ flex: 1 }}>
+//         <StatusBar style="dark" />
+//         <TopNavBar />
+//         {/* Screens render here */}
+//         <Slot />
+//         <Toast />
+//         {/* TabBar always visible at bottom */}
+//         <TabBar />
+//       </View>
+//     </CartProvider>
+
+//     </SafeAreaProvider>
+//   );
+// }
+
+
+
+import React, { useCallback } from 'react'; 
+import { Slot, useSegments } from "expo-router";
+import { View } from "react-native";
+import TabBar from "../components/TabBar";
+import TopNavBar from '@/components/TopNavBar';
+import { CartProvider } from "../contexts/CartContext";
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Toast from 'react-native-toast-message';
+import { StatusBar } from 'expo-status-bar';
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
+import { toastConfig } from '../toastConfig';
+
+
+// Keep the splash screen visible while we load fonts
+SplashScreen.preventAutoHideAsync();
+
+export default function RootLayout() {
+  const [fontsLoaded] = useFonts({
+    'IBMPlexMono-Regular': require('../assets/fonts/IBMPlexMono-Regular.ttf'),
+    'IBMPlexMono-Bold': require('../assets/fonts/IBMPlexMono-Bold.ttf'),
+    // 'IBMPlexSans_Condensed-Bold': require('../assets/fldonts/IBMPlexSans_Condensed-Bold.ttf'),
+    'IBMPlexSans-Bold': require('../assets/fonts/IBMPlexSans-Bold.ttf'),
+    'IBMPlexSans-Regular': require('../assets/fonts/IBMPlexSans-Regular.ttf'),
+  });
+
+  const segments = useSegments();
+  const currentRoute = segments.join('/'); // e.g., "product/[id]"
+// const hideTabBar = currentRoute === 'product/[id]';
+  const hideTabBar = ['product/[id]', 'cart'].includes(currentRoute);
+
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null; // Return null or a loading indicator while fonts are loading
+  }
+
+  return (
+    <SafeAreaProvider>
+      <CartProvider>
+        <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+          <StatusBar style="dark" />
+          <TopNavBar />
+          {/* Screens render here */}
+          <Slot />
+          {/* <Toast /> */}
+          <Toast config={toastConfig} />
+          {/* TabBar always visible at bottom */}
+          {/* <TabBar /> */}
+          {!hideTabBar && <TabBar />}
+        </View>
+      </CartProvider>
+    </SafeAreaProvider>
+  );
+}
