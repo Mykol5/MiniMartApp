@@ -39,7 +39,7 @@ The goal of this project was to:
 - Each card displays image, name, and price
 - Tapping a product navigates to details
 
-### 📄 Product Details
+### Product Details
 - Displays image, name, price, and description
 - Includes “Add to Cart” button
 - Shows toast confirmation and updates cart badge
@@ -62,6 +62,7 @@ The goal of this project was to:
 ```bash
 git clone https://github.com/yourusername/MiniMartApp.git
 cd MiniMartApp
+```
 
 ## Get started
 
