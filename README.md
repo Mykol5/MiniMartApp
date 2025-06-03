@@ -1,4 +1,4 @@
-# 🛒 MiniMart – eCommerce Preview App
+## 🛒 MiniMart – eCommerce Preview App
 
 This is a functional mobile application developed using **React Native (Expo)**. It was built based on a Figma design prototype for an eCommerce app as part of a mobile developer assessment. The app consists of three core screens: **Product Listing**, **Product Details**, and **Cart**, along with smooth navigation and state management for the cart functionality.
 
@@ -16,7 +16,7 @@ The goal of this project was to:
 
 ## Screenshots
 
-![Home Screen](assets/homescreen.png)  ![App Icon](assets/appiconscreen.jpg)
+![Home Screen](assets/homescreen.png) ![App Icon](assets/appiconscreen.jpg) ![Product Details Screen](assets/productdetails1.png) ![Product Details Screen](assets/productdetails2.png) ![Product Details Screen](assets/productdetails3.png) ![Cart Screen](assets/cartscreen.png) 
 
 
 
