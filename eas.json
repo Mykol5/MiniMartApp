@@ -8,8 +8,9 @@
       "distribution": "internal"
     },
     "production": {
-      "workflow": "managed",
-      "buildType": "apk"
+      "android": {
+        "buildType": "apk"
+      }
     }
   }
 }

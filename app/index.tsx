@@ -1,19 +1,3 @@
-// import React from 'react'; 
-// import { FlatList, View } from 'react-native'
-// import ProductCard from '../components/ProductCard'
-// import { products } from '../data/products'
-
-// export default function HomeScreen() {
-//   return (
-//     <FlatList
-//       data={products}
-//       renderItem={({ item }) => <ProductCard product={item} />}
-//       keyExtractor={(item) => item.id}
-//       contentContainerStyle={{ padding: 10 }}
-//     />
-//   )
-// }
-
 import { useState } from 'react';
 import { View, Text, FlatList, Pressable, StyleSheet, Image, ScrollView, TextInput } from 'react-native';
 import { Link, router } from 'expo-router';
@@ -370,3 +354,20 @@ const styles = StyleSheet.create({
 //     width: '100%'
 //   }
 // });
+
+
+// import React from 'react'; 
+// import { FlatList, View } from 'react-native'
+// import ProductCard from '../components/ProductCard'
+// import { products } from '../data/products'
+
+// export default function HomeScreen() {
+//   return (
+//     <FlatList
+//       data={products}
+//       renderItem={({ item }) => <ProductCard product={item} />}
+//       keyExtractor={(item) => item.id}
+//       contentContainerStyle={{ padding: 10 }}
+//     />
+//   )
+// }

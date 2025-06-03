@@ -1,35 +1,3 @@
-// import React from 'react'; 
-// import { Slot } from "expo-router";
-// import { View } from "react-native";
-// import TabBar from "../components/TabBar";
-// import TopNavBar from '@/components/TopNavBar';
-// import { CartProvider } from "../contexts/CartContext";
-// import { SafeAreaProvider } from 'react-native-safe-area-context';
-// import Toast from 'react-native-toast-message';
-// import { StatusBar } from 'expo-status-bar';
-
-// export default function RootLayout() {
-//   return (
-//     <SafeAreaProvider>
-
-//     <CartProvider>
-//       <View style={{ flex: 1 }}>
-//         <StatusBar style="dark" />
-//         <TopNavBar />
-//         {/* Screens render here */}
-//         <Slot />
-//         <Toast />
-//         {/* TabBar always visible at bottom */}
-//         <TabBar />
-//       </View>
-//     </CartProvider>
-
-//     </SafeAreaProvider>
-//   );
-// }
-
-
-
 import React, { useCallback } from 'react'; 
 import { Slot, useSegments } from "expo-router";
 import { View } from "react-native";
@@ -44,7 +12,6 @@ import * as SplashScreen from 'expo-splash-screen';
 import { toastConfig } from '../toastConfig';
 
 
-// Keep the splash screen visible while we load fonts
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -68,7 +35,7 @@ export default function RootLayout() {
   }, [fontsLoaded]);
 
   if (!fontsLoaded) {
-    return null; // Return null or a loading indicator while fonts are loading
+    return null; 
   }
 
   return (

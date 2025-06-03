@@ -1,39 +1,3 @@
-// import React from 'react'; 
-// import { View, Text, FlatList, Button } from 'react-native'
-// import { useCart } from '../contexts/CartContext'
-// import CartItem from '../components/CartItem'
-
-// export default function CartScreen() {
-//   const { items, removeFromCart, updateQuantity } = useCart()
-
-//   return (
-//     <View style={{ flex: 1, padding: 20, paddingBottom: 100 }}>
-//       {items.length === 0 ? (
-//         <Text>Your cart is empty</Text>
-//       ) : (
-//         <>
-//           <FlatList
-//             data={items}
-//             renderItem={({ item }) => (
-//               <CartItem 
-//                 item={item} 
-//                 onRemove={() => removeFromCart(item.id)}
-//                 onUpdateQuantity={(qty) => updateQuantity(item.id, qty)}
-//               />
-//             )}
-//             keyExtractor={(item) => item.id}
-//           />
-//           <Text style={{ fontSize: 20, textAlign: 'right', marginTop: 20 }}>
-//             Total: ${items.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
-//           </Text>
-//         </>
-//       )}
-//     </View>
-//   )
-// }
-
-
-
 import { View, Text, FlatList, StyleSheet, Pressable, Image } from 'react-native';
 import { useCart } from '../contexts/CartContext';
 import CartItem from '../components/CartItem';
@@ -213,3 +177,43 @@ const styles = StyleSheet.create({
     fontFamily: 'IBMPlexSans-Regular',
   }
 });
+
+
+
+
+
+
+// import React from 'react'; 
+// import { View, Text, FlatList, Button } from 'react-native'
+// import { useCart } from '../contexts/CartContext'
+// import CartItem from '../components/CartItem'
+
+// export default function CartScreen() {
+//   const { items, removeFromCart, updateQuantity } = useCart()
+
+//   return (
+//     <View style={{ flex: 1, padding: 20, paddingBottom: 100 }}>
+//       {items.length === 0 ? (
+//         <Text>Your cart is empty</Text>
+//       ) : (
+//         <>
+//           <FlatList
+//             data={items}
+//             renderItem={({ item }) => (
+//               <CartItem 
+//                 item={item} 
+//                 onRemove={() => removeFromCart(item.id)}
+//                 onUpdateQuantity={(qty) => updateQuantity(item.id, qty)}
+//               />
+//             )}
+//             keyExtractor={(item) => item.id}
+//           />
+//           <Text style={{ fontSize: 20, textAlign: 'right', marginTop: 20 }}>
+//             Total: ${items.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
+//           </Text>
+//         </>
+//       )}
+//     </View>
+//   )
+// }
+

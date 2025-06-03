@@ -1,35 +1,3 @@
-// import React from 'react'; 
-// import { View, Text, Image, Button, ScrollView } from 'react-native'
-// import { useLocalSearchParams } from 'expo-router'
-// import { useCart } from '../../contexts/CartContext'
-// import { products } from '../../data/products'
-
-// export default function ProductDetails() {
-//   const { id } = useLocalSearchParams()
-//   const { addToCart } = useCart()
-//   const product = products.find(p => p.id === id)
-
-//   return (
-//     <ScrollView contentContainerStyle={{ padding: 20, paddingBottom: 100 }}>
-//       <Image 
-//         source={{ uri: product?.image }} 
-//         style={{ width: '100%', height: 300, borderRadius: 10 }} 
-//       />
-//       <Text style={{ fontSize: 24, marginTop: 15 }}>{product?.name}</Text>
-//       <Text style={{ fontSize: 20, color: '#2ecc71', marginVertical: 10 }}>
-//         ${product?.price}
-//       </Text>
-//       <Text style={{ fontSize: 16, color: '#7f8c8d' }}>
-//         {product?.description}
-//       </Text>
-//       <Button 
-//         title="Add to Cart" 
-//         onPress={() => product && addToCart(product)} 
-//       />
-//     </ScrollView>
-//   )
-// }
-
 import { View, Text, ScrollView, Image, Pressable, StyleSheet } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCart } from '../../contexts/CartContext';
@@ -66,11 +34,11 @@ export default function ProductDetails() {
       position: 'top',
       visibilityTime: 2000,
       autoHide: true,
-      topOffset: 200, // Adjust this value as needed
+      topOffset: 200, 
           props: {
       style: { 
-      zIndex: 9999,      // 🆙 Higher than navbar
-      elevation: 9999,   // 🆙 Android needs elevation too
+      zIndex: 9999,      
+      elevation: 9999, 
       }
     }
     });
@@ -258,7 +226,7 @@ heartIcon: {
   top: 0,
   left: 0,
   right: 0,
-  height: 55, // You can use 15 or 20 if you're talking in dp, but 60 works visually for headers
+  height: 55, 
   backgroundColor: '#ffffff',
   justifyContent: 'center',
   paddingHorizontal: 16,
@@ -307,3 +275,39 @@ backButton: {
     fontFamily: 'IBMPlexSans-Bold',
   }
 });
+
+
+
+
+
+// import React from 'react'; 
+// import { View, Text, Image, Button, ScrollView } from 'react-native'
+// import { useLocalSearchParams } from 'expo-router'
+// import { useCart } from '../../contexts/CartContext'
+// import { products } from '../../data/products'
+
+// export default function ProductDetails() {
+//   const { id } = useLocalSearchParams()
+//   const { addToCart } = useCart()
+//   const product = products.find(p => p.id === id)
+
+//   return (
+//     <ScrollView contentContainerStyle={{ padding: 20, paddingBottom: 100 }}>
+//       <Image 
+//         source={{ uri: product?.image }} 
+//         style={{ width: '100%', height: 300, borderRadius: 10 }} 
+//       />
+//       <Text style={{ fontSize: 24, marginTop: 15 }}>{product?.name}</Text>
+//       <Text style={{ fontSize: 20, color: '#2ecc71', marginVertical: 10 }}>
+//         ${product?.price}
+//       </Text>
+//       <Text style={{ fontSize: 16, color: '#7f8c8d' }}>
+//         {product?.description}
+//       </Text>
+//       <Button 
+//         title="Add to Cart" 
+//         onPress={() => product && addToCart(product)} 
+//       />
+//     </ScrollView>
+//   )
+// }

@@ -1,111 +1,3 @@
-// import React from 'react'; 
-// import { View, Text, Image, Pressable, StyleSheet } from 'react-native'
-// import { CartItem as CartItemType } from '../contexts/CartContext'
-
-// type CartItemProps = {
-//   item: CartItemType
-//   onRemove: () => void
-//   onUpdateQuantity: (quantity: number) => void
-// }
-
-// export default function CartItem({ item, onRemove, onUpdateQuantity }: CartItemProps) {
-//   return (
-//     <View style={styles.container}>
-//       <Image source={{ uri: item.image }} style={styles.image} />
-//       <View style={styles.details}>
-//         <Text style={styles.name}>{item.name}</Text>
-//         <Text style={styles.price}>${item.price.toFixed(2)}</Text>
-//         <View style={styles.quantityContainer}>
-//           <Pressable 
-//             style={styles.quantityButton}
-//             onPress={() => onUpdateQuantity(item.quantity - 1)}
-//           >
-//             <Text style={styles.quantityText}>-</Text>
-//           </Pressable>
-//           <Text style={styles.quantity}>{item.quantity}</Text>
-//           <Pressable 
-//             style={styles.quantityButton}
-//             onPress={() => onUpdateQuantity(item.quantity + 1)}
-//           >
-//             <Text style={styles.quantityText}>+</Text>
-//           </Pressable>
-//         </View>
-//       </View>
-//       <Pressable style={styles.removeButton} onPress={onRemove}>
-//         <Text style={styles.removeText}>×</Text>
-//       </Pressable>
-//     </View>
-//   )
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flexDirection: 'row',
-//     padding: 10,
-//     marginBottom: 10,
-//     backgroundColor: '#fff',
-//     borderRadius: 8,
-//     shadowColor: '#000',
-//     shadowOffset: { width: 0, height: 1 },
-//     shadowOpacity: 0.1,
-//     shadowRadius: 2,
-//     elevation: 2,
-//   },
-//   image: {
-//     width: 80,
-//     height: 80,
-//     borderRadius: 4,
-//   },
-//   details: {
-//     flex: 1,
-//     marginLeft: 10,
-//     justifyContent: 'center',
-//   },
-//   name: {
-//     fontSize: 16,
-//     fontWeight: '500',
-//   },
-//   price: {
-//     fontSize: 14,
-//     color: '#888',
-//     marginTop: 4,
-//   },
-//   quantityContainer: {
-//     flexDirection: 'row',
-//     alignItems: 'center',
-//     marginTop: 8,
-//   },
-//   quantityButton: {
-//     width: 30,
-//     height: 30,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#f0f0f0',
-//     borderRadius: 15,
-//   },
-//   quantityText: {
-//     fontSize: 18,
-//     fontWeight: 'bold',
-//   },
-//   quantity: {
-//     marginHorizontal: 10,
-//     fontSize: 16,
-//   },
-//   removeButton: {
-//     width: 30,
-//     height: 30,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-//   removeText: {
-//     fontSize: 24,
-//     color: '#ff4444',
-//   },
-// })
-
-
-
-
 import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
 
 type CartItemProps = {
@@ -300,3 +192,114 @@ const styles = StyleSheet.create({
     resizeMode: 'contain'
   }
 });
+
+
+
+
+
+// import React from 'react'; 
+// import { View, Text, Image, Pressable, StyleSheet } from 'react-native'
+// import { CartItem as CartItemType } from '../contexts/CartContext'
+
+// type CartItemProps = {
+//   item: CartItemType
+//   onRemove: () => void
+//   onUpdateQuantity: (quantity: number) => void
+// }
+
+// export default function CartItem({ item, onRemove, onUpdateQuantity }: CartItemProps) {
+//   return (
+//     <View style={styles.container}>
+//       <Image source={{ uri: item.image }} style={styles.image} />
+//       <View style={styles.details}>
+//         <Text style={styles.name}>{item.name}</Text>
+//         <Text style={styles.price}>${item.price.toFixed(2)}</Text>
+//         <View style={styles.quantityContainer}>
+//           <Pressable 
+//             style={styles.quantityButton}
+//             onPress={() => onUpdateQuantity(item.quantity - 1)}
+//           >
+//             <Text style={styles.quantityText}>-</Text>
+//           </Pressable>
+//           <Text style={styles.quantity}>{item.quantity}</Text>
+//           <Pressable 
+//             style={styles.quantityButton}
+//             onPress={() => onUpdateQuantity(item.quantity + 1)}
+//           >
+//             <Text style={styles.quantityText}>+</Text>
+//           </Pressable>
+//         </View>
+//       </View>
+//       <Pressable style={styles.removeButton} onPress={onRemove}>
+//         <Text style={styles.removeText}>×</Text>
+//       </Pressable>
+//     </View>
+//   )
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flexDirection: 'row',
+//     padding: 10,
+//     marginBottom: 10,
+//     backgroundColor: '#fff',
+//     borderRadius: 8,
+//     shadowColor: '#000',
+//     shadowOffset: { width: 0, height: 1 },
+//     shadowOpacity: 0.1,
+//     shadowRadius: 2,
+//     elevation: 2,
+//   },
+//   image: {
+//     width: 80,
+//     height: 80,
+//     borderRadius: 4,
+//   },
+//   details: {
+//     flex: 1,
+//     marginLeft: 10,
+//     justifyContent: 'center',
+//   },
+//   name: {
+//     fontSize: 16,
+//     fontWeight: '500',
+//   },
+//   price: {
+//     fontSize: 14,
+//     color: '#888',
+//     marginTop: 4,
+//   },
+//   quantityContainer: {
+//     flexDirection: 'row',
+//     alignItems: 'center',
+//     marginTop: 8,
+//   },
+//   quantityButton: {
+//     width: 30,
+//     height: 30,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     backgroundColor: '#f0f0f0',
+//     borderRadius: 15,
+//   },
+//   quantityText: {
+//     fontSize: 18,
+//     fontWeight: 'bold',
+//   },
+//   quantity: {
+//     marginHorizontal: 10,
+//     fontSize: 16,
+//   },
+//   removeButton: {
+//     width: 30,
+//     height: 30,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//   },
+//   removeText: {
+//     fontSize: 24,
+//     color: '#ff4444',
+//   },
+// })
+
+
