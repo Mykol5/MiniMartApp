@@ -16,7 +16,7 @@ The goal of this project was to:
 
 ## Screenshots
 
-![Home Screen](assets/homescreen.png)
+![Home Screen](assets/homescreen.png)  ![App Icon](assets/appiconscreen.jpg)
 
 
 
