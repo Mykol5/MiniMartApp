@@ -10,16 +10,6 @@ The goal of this project was to:
 - Implement navigation and state management
 - Demonstrate reusable component structure and cart functionality
 
-## Figma Design
-
-[Figma Design Link](https://www.figma.com/design/ff6kLW7UB7N7JH8P33j39j/Alphatwelve-Mobile-App-Developer-Assessment)
-
-## Screenshots
-
-![Home Screen](assets/homescreen.png) ![App Icon](assets/appiconscreen.jpg) ![Product Details Screen](assets/productdetails1.png) ![Product Details Screen](assets/productdetails2.png) ![Product Details Screen](assets/productdetails3.png) ![Cart Screen](assets/cartscreen.png) 
-
-
-
 ## Tech Stack
 
 - **Framework**: React Native (Expo)
@@ -27,6 +17,24 @@ The goal of this project was to:
 - **State Management**: React Context API
 - **UI Libraries**: React Native Paper, React Native Vector Icons
 - **Package Manager**: yarn
+
+## Figma Design
+
+[Figma Design Link](https://www.figma.com/design/ff6kLW7UB7N7JH8P33j39j/Alphatwelve-Mobile-App-Developer-Assessment)
+
+## Compiled App Screenshots
+
+![Home Screen](assets/homescreen.png) 
+
+![App Icon](assets/appiconscreen.jpg) 
+
+![Product Details Screen](assets/productdetails1.png) 
+
+![Product Details Screen](assets/productdetails2.png) 
+
+![Product Details Screen](assets/productdetails3.png) 
+
+![Cart Screen](assets/cartscreen.png) 
 
 ## Features Implemented
 
