@@ -14,6 +14,12 @@ The goal of this project was to:
 
 [Figma Design Link](https://www.figma.com/design/ff6kLW7UB7N7JH8P33j39j/Alphatwelve-Mobile-App-Developer-Assessment)
 
+## Screenshots
+
+![Home Screen](assets/homescreen.png)
+
+
+
 ## Tech Stack
 
 - **Framework**: React Native (Expo)
